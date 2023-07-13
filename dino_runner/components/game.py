@@ -22,7 +22,7 @@ class Game:
             self.events()
             self.update()
             self.draw()
-        pygame.quit()
+        pygame.quit() # Fin del evento o el while.
 
     def events(self):
         for event in pygame.event.get():
@@ -34,12 +34,12 @@ class Game:
 
     def draw(self):
         self.clock.tick(FPS)
-        self.screen.fill((255, 255, 255))
+        self.screen.fill((255, 255, 255)) #se encarga de el color de la pantalla y recetearla.
         self.draw_background()
-        pygame.display.update()
-        pygame.display.flip()
+        pygame.display.update() # se encarga de dibujar en la pantalla 
+        pygame.display.flip() # cambiar de pagina
 
-    def draw_background(self):
+    def draw_background(self): 
         image_width = BG.get_width()
         self.screen.blit(BG, (self.x_pos_bg, self.y_pos_bg))
         self.screen.blit(BG, (image_width + self.x_pos_bg, self.y_pos_bg))
