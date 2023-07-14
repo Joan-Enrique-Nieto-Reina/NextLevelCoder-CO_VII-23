@@ -34,10 +34,10 @@ class Game:
 
     def draw(self):
         self.clock.tick(FPS)
-        self.screen.fill((255, 255, 255)) #se encarga de el color de la pantalla y recetearla.
+        self.screen.fill((255, 255, 255)) #Se encarga de el color de la pantalla y recetearla.
         self.draw_background()
-        pygame.display.update() # se encarga de dibujar en la pantalla 
-        pygame.display.flip() # cambiar de pagina
+        pygame.display.update() # Se encarga de dibujar en la pantalla. 
+        pygame.display.flip() # Cambiar de pagina.
 
     def draw_background(self): 
         image_width = BG.get_width()
