@@ -2,6 +2,8 @@
 # Crear la clase dinosaur. 
 # add_ init_ .
 # addd loop metodos (update, draw) pass.
+import pygame
+
 from pygame._sprite import sprite
 from dino_runner.utils.constants import (
     RUNNING,
@@ -9,7 +11,6 @@ from dino_runner.utils.constants import (
     JUMPING 
 )
 
-import pygame
 
 class Dinosaur(sprite):
 
