@@ -11,4 +11,3 @@ if __name__ == "__main__":
 # tarea clas 2.
 # agregar elementos al bacgraund.
 # cambiar la skin del dinosaurio.
-
