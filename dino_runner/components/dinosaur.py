@@ -4,15 +4,14 @@
 # addd loop metodos (update, draw) pass.
 import pygame
 
-from pygame._sprite import sprite
+from pygame.sprite import Sprite
 from dino_runner.utils.constants import (
     RUNNING,
     DUCKING,
     JUMPING 
 )
 
-
-class Dinosaur(sprite):
+class Dinosaur(Sprite):
 
     POS_x = 80
     POS_Y = 300

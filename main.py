@@ -9,6 +9,6 @@ if __name__ == "__main__":
 # pygame rect
 
 # tarea clas 2.
-# agrgar elementos al bacgraund.
+# agregar elementos al bacgraund.
 # cambiar la skin del dinosaurio.
 
