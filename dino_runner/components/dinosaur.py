@@ -6,9 +6,9 @@ import pygame
 
 from pygame.sprite import Sprite
 from dino_runner.utils.constants import (
-    RUNNING,
-    DUCKING,
-    JUMPING 
+    RUNNING_SHIELD,
+    DUCKING_SHIELD,
+    JUMPING_SHIELD 
 )
 
 class Dinosaur(Sprite):
@@ -19,7 +19,7 @@ class Dinosaur(Sprite):
     JUMP_VEL = 8.5
 
     def __init__(self):
-        self.image = RUNNING [0]
+        self.image = RUNNING_SHIELD [0]
         self.rect = self.image.get_rect()
         self.rect.x = self.POS_x
         self.rect.y = self.POS_Y
@@ -59,14 +59,14 @@ class Dinosaur(Sprite):
         screen.blit(self.image, self.rect)
 
     def run(self):
-        self.image = RUNNING[0] if self.step_index < 5 else RUNNING[1] #Cambio de imagne 1 a 2.
+        self.image = RUNNING_SHIELD[0] if self.step_index < 5 else RUNNING_SHIELD[1] #Cambio de imagne 1 a 2.
         self.rect = self.image.get_rect()
         self.rect.x = self.POS_x
         self.rect.y = self.POS_Y
         self.step_index += 1    
 
     def jump(self):
-        self.image = JUMPING
+        self.image = JUMPING_SHIELD
         if self.jumping:
             self.rect.y -= self.jumping_velocity * 4
             self.jumping_velocity -= 0.8 # Baja la velocidad del dino.
@@ -76,7 +76,7 @@ class Dinosaur(Sprite):
             self.jumping_velocity = self.JUMP_VEL
 
     def duck(self):
-        self.image = DUCKING[0] if self.step_index < 5 else DUCKING[1] #Cambio de imagne 1 a 2.
+        self.image = DUCKING_SHIELD[0] if self.step_index < 5 else DUCKING_SHIELD[1] #Cambio de imagne 1 a 2.
         self.rect = self.image.get_rect()
         self.rect.x = self.POS_x
         self.rect.y = self.DUCK_POS_Y
