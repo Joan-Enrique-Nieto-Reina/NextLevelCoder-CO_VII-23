@@ -14,7 +14,7 @@ class Game:
         self.playing = False
         self.game_speed = 20
         self.x_pos_bg = 0
-        self.y_pos_bg = 0
+        self.y_pos_bg = 0 #Cambie el tamaño a 0 para que se ajustara al tamaño de mi imagen.
         self.player = Dinosaur()
 
     def run(self):

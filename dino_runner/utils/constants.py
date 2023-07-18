@@ -69,6 +69,6 @@ BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
 
 BG2 = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track2.png'))
 
-HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
+HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))# Aqui esta mi nuevo fondo.
 
 DEFAULT_TYPE = "default"

@@ -42,7 +42,7 @@ class Dinosaur(Sprite):
             self.ducking = True
             self.jumping = False
 
-        elif user_input[pygame.K_UP] or user_input[pygame.K_SPACE] or user_input[pygame.K_w]:
+        elif user_input[pygame.K_UP] or user_input[pygame.K_SPACE] or user_input[pygame.K_w] and not self.ducking:
             self.running = False
             self.ducking = False
             self.jumping = True
@@ -80,4 +80,4 @@ class Dinosaur(Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = self.POS_x
         self.rect.y = self.DUCK_POS_Y
-        self.step_index += 1    
+        self.step_index = 1    
