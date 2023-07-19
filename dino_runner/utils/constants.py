@@ -2,7 +2,7 @@ import pygame
 import os
 
 # Global Constants
-TITLE = "Next Level Coder CO"
+TITLE = "THIRSTY IN THE DESERT."
 SCREEN_HEIGHT = 600
 SCREEN_WIDTH = 1100
 FPS = 30

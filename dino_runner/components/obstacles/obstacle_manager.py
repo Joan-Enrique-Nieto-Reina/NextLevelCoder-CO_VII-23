@@ -12,7 +12,10 @@ class ObstacleManager():
     def update(self, game):
         if not self.has_obstacle:
             self.create_obstacle()
-        self.has_obstacle = self.obstacle.update(game.game_speed) 
+        self.has_obstacle = self.obstacle.update(game.game_speed)
+        if game.player.rect.colliderect(self.obstacle.rect):
+            pygame.time.delay(500)
+            game.playing = False  
 
     def create_obstacle(self):
         self.obstacle = Cactus()
