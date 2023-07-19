@@ -9,12 +9,14 @@ class ObstacleManager():
     def update(self, game):
         if not self.has_obstacle:
             self.create_obstacle()
-        self.obstacle.update(game.game_speed)
+        self.has_obstacle = self.obstacle.update(game.game_speed) 
 
     def create_obstacle(self):
         self.obstacle = Cactus()
+        self.has_obstacle = True
 
     def draw(self, screen):
-        pass 
+        if self.has_obstacle:
+            self.obstacle.draw(screen) 
     # voy en el 1: 20 del video de la clase de ayer.
     

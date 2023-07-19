@@ -1,4 +1,5 @@
 import pygame
+from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 
 from dino_runner.utils.constants import BG2, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
 
@@ -14,8 +15,9 @@ class Game:
         self.playing = False
         self.game_speed = 20
         self.x_pos_bg = 0
-        self.y_pos_bg = 0 #Cambie el tamaño a 0 para que se ajustara al tamaño de mi imagen.
+        self.y_pos_bg = 300 #Cambie el tamaño a 0 para que se ajustara al tamaño de mi imagen.
         self.player = Dinosaur()
+        self.obstacle_manager = ObstacleManager()
 
     def run(self):
         # Game loop: events - update - draw
@@ -33,12 +35,14 @@ class Game:
 
     def update(self):
         self.player.update(pygame.key.get_pressed())
+        self.obstacle_manager.update(self)# Se encarga de mostrar o actualizar el obstaculo.
 
     def draw(self):
         self.clock.tick(FPS)
         self.screen.fill((255, 255, 255)) #Se encarga de el color de la pantalla y recetearla.
         self.draw_background()
         self.player.draw(self.screen)
+        self.obstacle_manager.draw(self.screen)
         pygame.display.update() # Se encarga de dibujar en la pantalla. 
         pygame.display.flip() # Cambiar de pagina.
 

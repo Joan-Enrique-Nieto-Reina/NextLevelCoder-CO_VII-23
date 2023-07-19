@@ -4,7 +4,7 @@ import pygame
 from dino_runner.utils.constants import (
     SCREEN_WIDTH
 )
-from pygame.sprite import _Group, Sprite
+from pygame.sprite import Sprite
 
 class Obstacle(Sprite):
     def __init__(self, image):
@@ -14,6 +14,8 @@ class Obstacle(Sprite):
         
     def update(self, game_speed):
         self.rect.x -= game_speed 
+        return self.rect.x < 0 #Tre if image is still on the screen, false otherwise
+                    
     
     def draw(self, screen):
         screen.blit(self.image, self.rect )
