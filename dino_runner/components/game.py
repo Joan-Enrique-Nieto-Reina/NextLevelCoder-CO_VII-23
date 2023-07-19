@@ -1,6 +1,6 @@
 import pygame
-from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 
+from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.utils.constants import BG2, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
 
 from dino_runner.components.dinosaur import Dinosaur
@@ -15,7 +15,7 @@ class Game:
         self.playing = False
         self.game_speed = 20
         self.x_pos_bg = 0
-        self.y_pos_bg = 300 #Cambie el tamaño a 0 para que se ajustara al tamaño de mi imagen.
+        self.y_pos_bg = 0 #Cambie el tamaño a 0 para que se ajustara al tamaño de mi imagen.
         self.player = Dinosaur()
         self.obstacle_manager = ObstacleManager()
 

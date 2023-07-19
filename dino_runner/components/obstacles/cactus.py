@@ -11,5 +11,6 @@ class Cactus(Obstacle):
         image_list = SMALL_CACTUS + LARGE_CACTUS
         select_image = random.choice(image_list)
         super().__init__(select_image)
-        self.rect.y = 300
+        s = 400
+        self.rect.y = s - 88
         

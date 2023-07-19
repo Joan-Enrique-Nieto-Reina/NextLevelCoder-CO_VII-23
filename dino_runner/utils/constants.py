@@ -11,6 +11,11 @@ IMG_DIR = os.path.join(os.path.dirname(__file__), "..", "assets")
 # Assets Constants
 ICON = pygame.image.load(os.path.join(IMG_DIR, "DinoWallpaper.png"))
 
+RUNNING1 = [
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun1.1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun2.1.png")),
+    ]
+
 RUNNING = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun1.png")),
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun2.png")),
@@ -26,9 +31,15 @@ RUNNING_HAMMER = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun2.png")),
 ]
 
+JUMPING1 = pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoJump1.png"))
 JUMPING = pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoJump.png"))
 JUMPING_SHIELD = pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoJumpShield.png"))
 JUMPING_HAMMER = pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoJumpHammer.png"))
+
+DUCKING1 = [
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuck1.1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuck2.1.png")),
+]
 
 DUCKING = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuck1.png")),
@@ -67,7 +78,7 @@ HAMMER = pygame.image.load(os.path.join(IMG_DIR, 'Other/hammer.png'))
 
 BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
 
-BG2 = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track2.png'))
+BG2 = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track2.jpeg'))
 
 HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))# Aqui esta mi nuevo fondo.
 

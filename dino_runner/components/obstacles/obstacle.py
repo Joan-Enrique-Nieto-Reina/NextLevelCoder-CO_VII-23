@@ -1,4 +1,3 @@
-from typing import Any
 import pygame
 
 from dino_runner.utils.constants import (
@@ -14,9 +13,8 @@ class Obstacle(Sprite):
         
     def update(self, game_speed):
         self.rect.x -= game_speed 
-        return self.rect.x < 0 #Tre if image is still on the screen, false otherwise
-                    
-    
+        return self.rect.x < 1100 and self.rect.x >= 0 #Tre if image is still on the screen, false otherwise
+         
     def draw(self, screen):
         screen.blit(self.image, self.rect )
         

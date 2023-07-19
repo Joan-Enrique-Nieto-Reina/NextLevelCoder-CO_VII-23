@@ -1,10 +1,13 @@
 
+import pygame
 from dino_runner.components.obstacles.cactus import Cactus
 
 class ObstacleManager():
     def __init__(self):
         self.has_obstacle = False
         self.obstacle = None
+        obstacles = pygame.sprite.Group()
+
 
     def update(self, game):
         if not self.has_obstacle:
@@ -18,5 +21,5 @@ class ObstacleManager():
     def draw(self, screen):
         if self.has_obstacle:
             self.obstacle.draw(screen) 
-    # voy en el 1: 20 del video de la clase de ayer.
+    
     
