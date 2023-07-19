@@ -1,6 +1,7 @@
 import pygame
 
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
+from dino_runner.components.obstaclesbird.obstacle_bird_manager import ObstacleBirdManager
 from dino_runner.components.powerups.powerup_manager import PowerupManager
 from dino_runner.utils.constants import BG2, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
 
@@ -20,8 +21,9 @@ class Game:
         self.player = Dinosaur()
         self.obstacle_manager = ObstacleManager()
         self.powerup_manager = PowerupManager()
+        self.obstacle_bird_manager = ObstacleBirdManager()
         self.score = 0
-
+        
     def run(self):
         # Game loop: events - update - draw
         self.playing = True
@@ -40,6 +42,7 @@ class Game:
         self.player.update(pygame.key.get_pressed())
         self.obstacle_manager.update(self)# Se encarga de mostrar o actualizar el obstaculo.
         self.powerup_manager.update(self)
+        self.obstacle_bird_manager.update(self)
         self.increase_score()
 
     def increase_score(self):
@@ -52,6 +55,7 @@ class Game:
         self.player.draw(self.screen)
         self.obstacle_manager.draw(self.screen)
         self.powerup_manager.draw(self.screen)
+        self.obstacle_bird_manager.draw(self.screen)
         pygame.display.update() # Se encarga de dibujar en la pantalla. 
         pygame.display.flip() # Cambiar de pagina.
 
