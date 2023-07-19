@@ -15,4 +15,6 @@ class ObstacleManager():
         self.obstacle = Cactus()
 
     def draw(self, screen):
-        if self.obstacle
+        pass 
+    # voy en el 1: 20 del video de la clase de ayer.
+    
