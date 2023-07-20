@@ -9,8 +9,8 @@ class ObstacleWind(Sprite):
     def __init__(self, image):
         self.image = image
         self.rect = self.image.get_rect()
-        self.rect.x = SCREEN_WIDTH
-        self.rect.y = 30
+        self.rect.x = SCREEN_WIDTH - 60  
+        self.rect.y = 300
         
     def update(self, game_speed):
         self.rect.x -= game_speed 

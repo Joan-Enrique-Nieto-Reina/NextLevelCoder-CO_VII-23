@@ -68,13 +68,13 @@ LARGE_CACTUS = [
 ]
 
 CLOUD1 = [
-    pygame.image.load(os.path.join(IMG_DIR, 'Cloud/Cloud3.1.png')),
-    pygame.image.load(os.path.join(IMG_DIR, 'Cloud/Cloud4.png')),
+    pygame.image.load(os.path.join(IMG_DIR, 'Cloud/Cloud1.png')),
+    pygame.image.load(os.path.join(IMG_DIR, 'Cloud/Cloud.png')),
+    pygame.image.load(os.path.join(IMG_DIR, 'Cloud/Cloud3.png')),
 ]
 CLOUD2 = [
     pygame.image.load(os.path.join(IMG_DIR, 'Cloud/Cloud.png')),
     pygame.image.load(os.path.join(IMG_DIR, 'Cloud/Cloud2.png')),
-    pygame.image.load(os.path.join(IMG_DIR, 'Cloud/Cloud3.png')),
 ]
 
 BIRD = [
