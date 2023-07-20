@@ -1,5 +1,6 @@
 from dino_runner.utils.constants import (
-    SCREEN_WIDTH
+    SCREEN_WIDTH,
+    DEFAULT_TYPE
 )
 
 from pygame.sprite import Sprite
@@ -10,6 +11,7 @@ class PowerUP(Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = SCREEN_WIDTH - 80 
         self.rect.y = 300
+        self.type = DEFAULT_TYPE
 
     def update(self, game_speed):
         self.rect.x -= game_speed

@@ -1,4 +1,5 @@
 import pygame
+import datetime
 from dino_runner.components.clouds.obstacle_cloud_manager import ObstacleCloudManager
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.obstaclesbird.obstacle_bird_manager import ObstacleBirdManager
@@ -26,6 +27,7 @@ class Game:
         self.obstacle_cloud_manager = ObstacleCloudManager()
         self.obstacle_wind_manager = ObstacleWindManager()
         self.score = 0
+        self.start_time = datetime.datetime.now() #Tiempo inical.
         
     def run(self):
         # Game loop: events - update - draw
@@ -57,6 +59,15 @@ class Game:
         self.clock.tick(FPS)
         self.screen.fill((255, 255, 255)) #Se encarga de el color de la pantalla y recetearla.
         self.draw_background()
+        font = pygame.font.SysFont(None, 40)
+        score_text = font.render(f"Score: {self.score}", True, (0, 0, 0))
+        self.screen.blit(score_text, (10, 10))  # Ajusta la posición del texto como desees
+        # Calcula el tiempo transcurrido
+        current_time = datetime.datetime.now()
+        elapsed_time = current_time - self.start_time
+        elapsed_time_seconds = elapsed_time.total_seconds()
+        time_text = font.render(f"Time: {int(elapsed_time_seconds)} seconds", True, (0, 0, 0))
+        self.screen.blit(time_text, (10, 50))
         self.player.draw(self.screen)
         self.obstacle_manager.draw(self.screen)
         self.powerup_manager.draw(self.screen)

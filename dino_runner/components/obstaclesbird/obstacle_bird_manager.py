@@ -2,6 +2,7 @@ import pygame
 import random
 
 from dino_runner.components.obstaclesbird.bird import Bird
+from dino_runner.utils.constants import SHIELD_TYPE, DEFAULT_TYPE
 
 class ObstacleBirdManager():
     def __init__(self):
@@ -17,8 +18,12 @@ class ObstacleBirdManager():
         if self.has_Bird:
             self.has_Bird = self.bird.update(game.game_speed)
             if game.player.rect.colliderect(self.bird.rect):
-                pygame.time.delay(500)
-                game.playing = False  
+                if game.player.type == SHIELD_TYPE:
+                    game.player.type = DEFAULT_TYPE
+                    self.has_Bird = False
+                else:
+                    pygame.time.delay(500)
+                    game.playing = False  
 
     def create_bird(self):
         self.bird = Bird()

@@ -98,3 +98,4 @@ BG2 = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track2.jpeg'))
 HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))# Aqui esta mi nuevo fondo.
 
 DEFAULT_TYPE = "default"
+SHIELD_TYPE = "shield"
