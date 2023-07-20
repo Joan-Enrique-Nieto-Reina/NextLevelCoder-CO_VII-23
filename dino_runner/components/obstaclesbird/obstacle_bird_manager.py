@@ -1,4 +1,5 @@
 import pygame
+import random
 
 from dino_runner.components.obstaclesbird.bird import Bird
 
@@ -12,6 +13,7 @@ class ObstacleBirdManager():
     def update(self, game):
         if not self.has_Bird and game.score == self.next_bird_show:
             self.create_bird()
+            self.next_bird_show += random.randint(200, 500)
         if self.has_Bird:
             self.has_Bird = self.bird.update(game.game_speed)
             if game.player.rect.colliderect(self.bird.rect):
