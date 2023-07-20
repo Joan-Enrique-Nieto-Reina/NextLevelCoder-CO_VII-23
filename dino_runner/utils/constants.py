@@ -67,6 +67,16 @@ LARGE_CACTUS = [
     pygame.image.load(os.path.join(IMG_DIR, "Cactus/LargeCactus3.png")),
 ]
 
+CLOUD1 = [
+    pygame.image.load(os.path.join(IMG_DIR, 'Cloud/Cloud3.1.png')),
+    pygame.image.load(os.path.join(IMG_DIR, 'Cloud/Cloud4.png')),
+]
+CLOUD2 = [
+    pygame.image.load(os.path.join(IMG_DIR, 'Cloud/Cloud.png')),
+    pygame.image.load(os.path.join(IMG_DIR, 'Cloud/Cloud2.png')),
+    pygame.image.load(os.path.join(IMG_DIR, 'Cloud/Cloud3.png')),
+]
+
 BIRD = [
     pygame.image.load(os.path.join(IMG_DIR, "Bird/Bird1.png")),
     pygame.image.load(os.path.join(IMG_DIR, "Bird/Bird2.png")),

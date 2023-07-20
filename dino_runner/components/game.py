@@ -1,5 +1,5 @@
 import pygame
-
+from dino_runner.components.clouds.obstacle_cloud_manager import ObstacleCloudManager
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.obstaclesbird.obstacle_bird_manager import ObstacleBirdManager
 from dino_runner.components.powerups.powerup_manager import PowerupManager
@@ -22,6 +22,7 @@ class Game:
         self.obstacle_manager = ObstacleManager()
         self.powerup_manager = PowerupManager()
         self.obstacle_bird_manager = ObstacleBirdManager()
+        self.obstacle_cloud_manager = ObstacleCloudManager()
         self.score = 0
         
     def run(self):
@@ -43,6 +44,7 @@ class Game:
         self.obstacle_manager.update(self)# Se encarga de mostrar o actualizar el obstaculo.
         self.powerup_manager.update(self)
         self.obstacle_bird_manager.update(self)
+        self.obstacle_cloud_manager.update(self)
         self.increase_score()
 
     def increase_score(self):
@@ -56,6 +58,7 @@ class Game:
         self.obstacle_manager.draw(self.screen)
         self.powerup_manager.draw(self.screen)
         self.obstacle_bird_manager.draw(self.screen)
+        self.obstacle_cloud_manager.draw(self.screen)
         pygame.display.update() # Se encarga de dibujar en la pantalla. 
         pygame.display.flip() # Cambiar de pagina.
 

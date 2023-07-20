@@ -12,4 +12,3 @@ class Bird(ObstacleBird):
         select_image = random.choice(image_list)
         super().__init__(select_image)
         
-        
