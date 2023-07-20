@@ -8,7 +8,6 @@ class ObstacleManager():
         self.obstacle = None
         obstacles = pygame.sprite.Group()
 
-
     def update(self, game):
         if not self.has_obstacle:
             self.create_obstacle()
