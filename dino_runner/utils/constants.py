@@ -86,7 +86,6 @@ WIND = [
     pygame.image.load(os.path.join(IMG_DIR, "Wind/Wind.png")),
 ]
 
-
 CLOUD = pygame.image.load(os.path.join(IMG_DIR, 'Other/Cloud.png'))
 SHIELD = pygame.image.load(os.path.join(IMG_DIR, 'Other/shield.png'))
 STEPPES = pygame.image.load(os.path.join(IMG_DIR, 'Steppes/Steppes.png'))

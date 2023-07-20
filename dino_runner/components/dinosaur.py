@@ -17,7 +17,7 @@ from dino_runner.utils.constants import (
     JUMPING_SHIELD,
     DUCKING_HAMMER,
     JUMPING_HAMMER,
-    RUNNING_HAMMER
+    RUNNING_HAMMER,
 )
 
 class Dinosaur(Sprite):
@@ -43,7 +43,7 @@ class Dinosaur(Sprite):
         self.jumping = False    
         self.jumping_velocity = self.JUMP_VEL
         self.setup_states()
- 
+         
     def setup_states(self):
         self.has_powerup = False
         self.has_shield = False
@@ -72,7 +72,6 @@ class Dinosaur(Sprite):
             self.running = True
             self.ducking = False
             self.jumping = False
-
         if self.step_index >= 10: 
             self.step_index = 0
 
