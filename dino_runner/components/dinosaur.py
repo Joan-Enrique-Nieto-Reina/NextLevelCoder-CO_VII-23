@@ -11,9 +11,13 @@ from dino_runner.utils.constants import (
     JUMPING1,
     DEFAULT_TYPE,
     SHIELD_TYPE,
+    HAMMER_TYPE,
     DUCKING_SHIELD,
     RUNNING_SHIELD,
-    JUMPING_SHIELD
+    JUMPING_SHIELD,
+    DUCKING_HAMMER,
+    JUMPING_HAMMER,
+    RUNNING_HAMMER
 )
 
 class Dinosaur(Sprite):
@@ -24,9 +28,9 @@ class Dinosaur(Sprite):
     JUMP_VEL = 8.5
 
     def __init__(self):
-        self.running_img = {DEFAULT_TYPE: RUNNING1, SHIELD_TYPE:RUNNING_SHIELD} 
-        self.jumping_img = {DEFAULT_TYPE: JUMPING1, SHIELD_TYPE:JUMPING_SHIELD} 
-        self.ducking_img = {DEFAULT_TYPE: DUCKING1, SHIELD_TYPE:DUCKING_SHIELD}  
+        self.running_img = {DEFAULT_TYPE: RUNNING1, SHIELD_TYPE:RUNNING_SHIELD, HAMMER_TYPE:RUNNING_HAMMER} 
+        self.jumping_img = {DEFAULT_TYPE: JUMPING1, SHIELD_TYPE:JUMPING_SHIELD,  HAMMER_TYPE:JUMPING_HAMMER} 
+        self.ducking_img = {DEFAULT_TYPE: DUCKING1, SHIELD_TYPE:DUCKING_SHIELD, HAMMER_TYPE:DUCKING_HAMMER}  
         self.type = DEFAULT_TYPE
 
         self.image = self.running_img[self.type][0]
@@ -43,6 +47,7 @@ class Dinosaur(Sprite):
     def setup_states(self):
         self.has_powerup = False
         self.has_shield = False
+        self.has_hammer = False
         
 
     def update(self, user_input):

@@ -4,6 +4,7 @@ from dino_runner.components.clouds.obstacle_cloud_manager import ObstacleCloudMa
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.obstaclesbird.obstacle_bird_manager import ObstacleBirdManager
 from dino_runner.components.powerups.powerup_manager import PowerupManager
+from dino_runner.components.powerupsSte.powerupSte_manager import PowerSteManager
 from dino_runner.components.winds.obstacles_wind_manager import ObstacleWindManager
 from dino_runner.utils.constants import BG2, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
 
@@ -26,6 +27,7 @@ class Game:
         self.obstacle_bird_manager = ObstacleBirdManager()
         self.obstacle_cloud_manager = ObstacleCloudManager()
         self.obstacle_wind_manager = ObstacleWindManager()
+        self.powerSte_manager = PowerSteManager()
         self.score = 0
         self.start_time = datetime.datetime.now() #Tiempo inical.
         

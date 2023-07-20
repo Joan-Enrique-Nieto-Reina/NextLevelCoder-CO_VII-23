@@ -32,4 +32,4 @@ class ObstacleBirdManager():
     def draw(self, screen):
         if self.has_Bird:
             self.bird.draw(screen) 
-    
+        
